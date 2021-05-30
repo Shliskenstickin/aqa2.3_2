@@ -39,15 +39,13 @@ public class DataGenerator {
     }
 
     public static String getRandomPassword() {
-        String password = faker.internet().password();
-        return password;
+        return faker.internet().password();
     }
 
     public static class Registration {
 
         public static RegistrationDto getUser(String status) {
-            RegistrationDto user = new RegistrationDto(getRandomLogin(), getRandomPassword(), status);
-            return user;
+            return new RegistrationDto(getRandomLogin(), getRandomPassword(), status);
         }
 
         public static RegistrationDto getRegisteredUser(String status) {
